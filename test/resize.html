@@ -1,0 +1,146 @@
+<HTML>
+    <HEAD>
+        <link href="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8/themes/base/jquery-ui.css" rel="stylesheet" type="text/css"/>
+        <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.5/jquery.min.js"></script>
+        <script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8/jquery-ui.min.js"></script>
+        <link rel="stylesheet" href="src/jquery.Jcrop.css" type="text/css" />
+        <script src="src/jquery.Jcrop.js"></script>
+        <script src="src/jqDnR.js"></script>
+        <style type="text/css"> 
+
+
+            #Test1 {
+                position: absolute;
+                top : 10px;
+                bottom : 10px;
+                left : 10px;
+                right :10px;
+                width: 500px;
+                height: 500px;
+                background-color: #dddddd;
+            }
+            #Test2 {
+                position: absolute;
+                top : 10px;
+                bottom : 500px;
+                left : 800px;
+                right :50px;
+                width: 300px;
+                height: 500px;
+                background-color: #dedede;
+
+            }
+            #btn {
+                position: absolute;
+                top : 10px;
+                bottom : 500px;
+                left : 600px;
+                right :50px;
+                width: 100px;
+                height: 500px;
+            }
+
+        </style> 
+    </HEAD>
+
+    <BODY>   
+        <div id=main>
+            <div  id="Test1" class="parent" style="opacity: 0.5"> 
+                <h2>Test1</h2> 
+                <img class="drag" id= "img" src="http://127.0.0.1/sandbox/uploads/39392689.jpg" />
+                <div class="drag" id= "t1" style= "background-color: green; position: absolute;top: 200; left:300; opacity: 0.5">test1</div>
+                <div class="drag" id= "t2" style= "background-color: blue;  position: absolute;top: 250; left:300; opacity: 0.5">test2</div>
+            </div> 
+            <div id="btn">
+                <input type="button" value="SAVE" id="Save" /> 
+            </div>
+            <div id="Test2" class="parent" style="opacity: 0.5"> 
+                <h2>Test2</h2> 
+                <div class="drag" id= "t3" style= "background-color: red;  position: absolute; top: 50; left:20; opacity: 0.5">test3</div>
+            </div> 
+            <div id=show>
+                <label>X1 <input type="text" size="4" id="x1" name="x1" /></label>
+                <label>Y1 <input type="text" size="4" id="y1" name="y1" /></label>
+                <label>X2 <input type="text" size="4" id="x2" name="x2" /></label>
+                <label>Y2 <input type="text" size="4" id="y2" name="y2" /></label>
+                <label>W <input type="text" size="4" id="w" name="w" /></label>
+                <label>H <input type="text" size="4" id="h" name="h" /></label>
+            </div>
+            <div id="show2"></div>
+        </div>
+
+
+        <script>
+            $(document).ready(function() {
+                /*
+        $('.drag').draggable({opacity:	0.5});
+	
+        $(".drag").click( function(){
+                var top= $(this).offset().top;
+                var left = $(this).offset().left;
+                var zindex = $(this).css("z-index");
+        //	var pos = $(this).postion();
+
+                var html = "<p>top= "+ top+", left= "+left +", z-index= "+ zindex+"</p>";
+                $("#show").html(html);
+		
+                $("#t1").css('top',top);
+                $("#t1").css('left',left);
+        });
+                 */
+                /*$('#img').mousedown(function(){
+                $(this).draggable();
+        });
+        $('#img').dblclick(function(){
+                $(this).Jcrop();
+        });
+                 */
+                //         $('.drag').draggable();
+
+                $('.drag').mousedown(function(){
+                    var wid = $(this).width();
+                    var height = $(this).height();
+                    //  var top= $(this).offset().top;
+                    //	var left = $(this).offset().left;
+ 
+                    $('#w').val(wid);
+                    $('#h').val(height);
+                    $(this).draggable();
+                    $(this).Jcrop({
+                        setSelect: [0,0,height,wid],
+                        aspectRatio: 1,
+                                
+                        onChange:   showCoords
+                        // onSelect:   showCoords
+                        // onRelease:  clearCoords
+                    });
+                });//mousedown
+
+                function selection(c){
+                    var wid = $(this).width();
+                    var height = $(this).height();
+                    $('#w').val(wid );
+                    $('#h').val(height );
+                };
+                
+                function showCoords(c){
+                    $('#x1').val(c.x);
+                    $('#y1').val(c.y);
+                    $('#x2').val(c.x2);
+                    $('#y2').val(c.y2);
+                    $('#w').val(c.w);
+                    $('#h').val(c.h);
+                    
+                    //var tp= c.offset().top();
+                    //var left=c.pffset.left();
+                    
+                    //     $('#show2').innerHTML("top: "+tp+", left:"+ left);
+                    
+                };
+
+            });//end all
+            //   .drag { width: 100px; height: 70px; }
+        </script>
+    </BODY>  
+</HTML>
+
