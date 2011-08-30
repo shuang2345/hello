@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link href="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8/themes/base/jquery-ui.css" rel="stylesheet" type="text/css"/>
+   <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.5/jquery.min.js"></script>
+  <script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8/jquery-ui.min.js"></script>
+ 
+  
+  <script>
+	 $(document).ready(function() {		
+		var dragging = false;
+		
+		function initImage(){
+			var dataUrl = 'http://127.0.0.1/sandbox/mix.php';
+		//	var dataUrl = 'http://nojuice.bravomix.com/mix.php';
+			$.post(dataUrl, {mix_id: 28}, function(resp){
+				$.each(resp,function(key){
+			//		var div= $('<div></div>');
+		//			div.attr('class','drag');
+					var img = $('<img/>');
+					img.attr('src','uploads/'+resp[key].filename);
+		//			img.attr('class', 'drag');
+					img.css('position','absolute');
+					img.css('top',resp[key].top);
+					img.css('left',resp[key].left);
+                                        img.css('width',150);
+                                        img.css('height',150);
+	//				img.css('z-index','absolute');
+					img.css('z-index', resp[key].layer);
+		//			div.html(img);
+                                        $("#Test1").append(img);
+                                        img.resizable({aspectRatio: 1});
+                                        img.parent('.ui-wrapper').draggable({revert: 'invalid'});
+                        //		div.draggable({opacity:	0.5});
+					img.mousemove(Check2);
+					
+				});
+			},'json');
+		}//iniimage
+		initImage();
+		
+		function initWardrobe(){
+			var dataUrl = 'http://127.0.0.1/sandbox/wardrobe.php';
+		//	var dataUrl = 'http://nojuice.bravomix.com/wardrobe.php';
+			var html =" ";
+			$.post(dataUrl, {mix_id: 28}, function(resp){
+				$.each(resp,function(key){
+			//		var div= $('<div></div>');
+			//		div.attr('class','drag');
+					var img = $('<img/>');
+					img.attr('src','uploads/'+resp[key].filename);
+					img.attr('class', 'drag');
+					img.css('position','absolute');
+					img.css('top',resp[key].top);
+					img.css('left',resp[key].left);
+                                        img.css('width',150);
+                                        img.css('height',150);
+	//				img.css('z-index','absolute');
+					img.css('z-index',resp[key].layer);
+                        //                div.html(img);
+                                        $("#Test2").append(img);
+                                        img.resizable({aspectRatio: 1});
+                                        img.parent('.ui-wrapper').draggable({revert: 'invalid'});
+                        //		div.draggable({opacity:	0.5});
+					img.mousemove(Check2);
+					//$("#main").html(img);
+				});
+			},'json');
+		}//iniWardrobe
+		initWardrobe();
+		
+/*		
+		function Move(obj){
+			$(this).css("z-index","200").siblings().css("z-index","100");
+			$(this).css('border','1px solid red');
+			var val='';
+            val = $(this).offset().left;
+            //alert(val);
+			
+			if(val < 500){
+				$(this).appendTo('#Test1');
+            }
+			if(val >=500){
+				$(this).appendTo('#Test2');
+			}
+		}
+		*/
+		
+		function Check2(obj){
+		//	$(this).css('border','1px solid red');
+			//down
+			$(this).mousedown(
+				function(){
+					dragging = true;
+					var top= $(this).offset().top;
+					var left = $(this).offset().left;
+					var html = "<p>top= "+ top+", left= "+left +"</p>";
+					//$(this).append(html);
+					
+			});
+			console.log(dragging);
+			
+			//up
+			$(this).mouseup(
+				function(){
+					dragging = false;
+			});
+		
+		}//check
+		
+		$("#Test1").droppable({
+			accept: ".ui-wrapper",
+			
+			drop: function(ev, ui) {
+				var top= $(ui.draggable).offset().top;
+				var left = $(ui.draggable).offset().left;
+				var html = "<p>top= "+ top+", left= "+left +"</p>";
+	//			$("#show").html(html);
+				
+				$(ui.draggable).appendTo($(this));
+				$(ui.draggable).offset({ top: top, left: left });
+			}
+		});
+	
+		$("#Test2").droppable({
+			accept: ".ui-wrapper",
+			
+			drop: function(ev, ui) {
+				var top= $(ui.draggable).offset().top;
+				var left = $(ui.draggable).offset().left;
+				var html = "<p>top= "+ top+", left= "+left +"</p>";
+			//	$("#show").html(html);
+				
+				$(ui.draggable).appendTo($(this));
+				
+				$(ui.draggable).offset({ top: top, left: left });
+			}
+		});
+		
+		/*
+		function Check(obj){
+			$(this).mousedown(function(){dragging = true;});
+			
+			$(this).css('border','1px solid red');
+		//	alert("rr");
+			var hit1 = $(this)._hittest( $('#Test1') );
+			var hit2 = $(this)._hittest( $('#Test2') );
+			alert("hit1= "+hit1+" ,hit2= "+hit2);
+			
+			if( hit1 == "true"){
+				alert("1");
+			//	$(this).appendTo('#Test1');
+			}if( hit2 == 'true'){
+				alert("2");
+			//	$(this).appendTo('#Test2');
+			}
+		//	alert(hit);
+		}
+			*/
+			
+	$("#Save").click(function() 
+		{
+		//	alert("ddd");
+			var element = $('#Test1 > .ui-wrapper');
+				var val = '';
+				for (var i = 0; i < element.length; i++) {
+						val += element[i].src + "\n";
+				}
+				alert("FILE!! \n" + val);
+		}
+	); 
+    });//end all
+  </script>
+<style type="text/css"> 
+
+#Test1 {
+	position: absolute;
+	top : 10px;
+	bottom : 10px;
+	left : 10px;
+	right :10px;
+	width: 500px;
+	height: 500px;
+	background-color: #dddddd;
+}
+#Test2 {
+	position: absolute;
+	top : 10px;
+	bottom : 500px;
+	left : 800px;
+	right :50px;
+	width: 300px;
+	height: 500px;
+	background-color: #dedede;
+	
+}
+#btn {
+                position: absolute;
+                top : 10px;
+                bottom : 500px;
+                left : 600px;
+                right :50px;
+                width: 100px;
+                height: 500px;
+}
+
+</style> 
+</head>
+<body>
+	<div id=show></div>
+	<div id=main>
+		<div  id="Test1" class="parent" > 
+			<h2>Test1</h2> 
+		</div> 
+		<div id="btn">
+			<input type="button" value="SAVE" id="Save" /> 
+		</div>
+		<div id="Test2" class="parent"> 
+			<h2>Test2</h2> 
+		</div> 
+	</div>
+</body>
+</html>
