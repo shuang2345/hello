@@ -1,0 +1,131 @@
+
+/*
+最上方欄位
+*/
+
+#head{
+	height: 40px;
+	text-align: right;
+	
+}
+
+div li{
+	list-style-type:none;
+    list-style: none;
+    list-style-image: none;
+	display: inline;
+	padding-left: 10px;
+	padding-right: 10px;
+}
+/*
+選單按鍵
+*/
+#button{
+	height: 50px;
+	padding-top: 20px;
+	text-align: center;
+	padding-bottom: 0;
+	
+}
+
+/*
+中間空白處
+*/
+#blank{
+	height: 45px;
+}
+
+/*
+左邊欄位
+*/
+#search{
+	margin-top: 30px;
+}
+.side {
+	padding-top: 10px;
+	border-right:1px solid #9fa0a0;
+	border-left:1px solid #9fa0a0;
+	border-bottom:1px solid #9fa0a0;
+}
+.side_l {
+	height: 300px;
+	padding-top: 10px;
+	border-right:1px solid #9fa0a0;
+	border-left:1px solid #9fa0a0;
+	border-bottom:1px solid #9fa0a0;
+	text-align: center;
+	background-color: #f5f2e9;
+}
+.title{
+	font-size:125%;
+}
+
+/*
+首頁中間說明處
+*/
+.description{
+	height: 80px;
+	margin-top: 5px;
+}
+.description #des_1{
+	text-align: left;
+}
+.description #des_2{
+	text-align: right;	
+}
+
+/*
+首頁主要內容
+*/
+.middle{
+	height: 45px;
+	border: 1px solid #9fa0a0;
+	text-align: right;
+	background-color: #f5f2e9;
+}
+.mixpad{
+	border-right:1px solid #9fa0a0;
+	border-left:1px solid #9fa0a0;
+	border-bottom:1px solid #9fa0a0;
+}
+
+/*
+單品頁
+*/
+.mix{
+	margin-top: 40px;
+}
+/*
+分隔線
+*/
+hr{
+	background-color: #9fa0a0;
+}
+/*
+達人頁面
+*/
+.pro_pad{
+	background-color: #f5f2e9;
+	margin-top: 40px;
+	border: 1px solid #9fa0a0;
+}
+.photo{
+	border-right: 1px solid #000000;
+	width: 210px;
+	margin-top: 20px;
+}
+.btns{
+	height: 40px;
+	margin-top: 20px;
+}
+.profile{
+	margin-top: 20px;
+}
+
+.info{
+	margin-top: 50px;
+	padding-top: 20px;
+}
+.info a{
+	color: #88502c;
+}
