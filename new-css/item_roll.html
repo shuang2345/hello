@@ -1,0 +1,118 @@
+<html>
+<head>
+<link href="assets/css/item.css" rel="stylesheet" type="text/css" />
+<link href="assets/css/bravomix.css" rel="stylesheet" type="text/css" />
+<link href="assets/css/screen.css" rel="stylesheet" type="text/css" />
+<link href="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8/themes/base/jquery-ui.css" rel="stylesheet" type="text/css"/>
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.5/jquery.min.js"></script>
+<script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8/jquery-ui.min.js"></script>
+<style>
+.detail{
+	hight:200px;
+	border: 1px solid #9fa0a0;
+	background-color: #9fa0a0;
+}
+</style>
+
+<script>
+/*
+$(document).ready(function(){  
+	$(".detail").hide();
+	
+	$(".product").click(function(){
+			
+			$('.detail').hide();
+			$(this).next('.detail').show();
+		}
+	);
+});
+*/
+</script>
+<script type="text/javascript">
+function test(id){
+	
+	//alert(id);
+	var ans;
+	var cal=parseInt(id%4);
+	var html="<div class='span-15'> TESTTEST</div>";
+	var ttt="tttttt";
+	
+	
+	if(cal ==0){
+		alert("tes");
+	//	num=(cal*4)+1;
+		num=parseInt(id/4);
+		var div="show-"+num;
+		document.getElementById(div).style.display="block";
+	}else{
+		alert("no");
+		cal=parseInt(id/4);
+		num=(cal+1);
+		alert(num);
+		var div="show-"+num;
+		document.getElementById(div).style.display="block";
+	}
+	
+}
+</script>
+</head>
+<div id="item-roll" class="container">
+	<div id="middle" class= "span-19">
+			<br><h6>排序規則</h6>
+	</div>
+		
+	<div id="pad" class= "span-17 mixpad">
+			<span id="1" class=" product  span-4" >
+				<img src="assets/css/gallery/img/empty.png" width="120" height="120"/>
+			</span>
+			<span id="2" class=" product  span-4" >
+				<img src="assets/css/gallery/img/empty.png" width="120" height="120"/>
+			</span>
+			<span id="3" class=" product  span-4"  >
+				<img src="assets/css/gallery/img/empty.png" width="120" height="120"/>
+			</span>			
+			<span id="4" class=" product  span-4"  >
+				<img src="assets/css/gallery/img/empty.png" width="120" height="120"/>
+			</span>		
+			<div id="show-1" class="detail span-16">ttt</div>			
+			<span id="5" class=" product  span-4"  >
+				<img src="assets/css/gallery/img/empty.png" width="120" height="120"/>
+			</span>
+			<span id="6" class=" product  span-4"  >
+				<img src="assets/css/gallery/img/empty.png" width="120" height="120"/>
+			</span>
+			<span id="7" class=" product  span-4"  >
+				<img src="assets/css/gallery/img/empty.png" width="120" height="120"/>
+			</span>
+			<span id="8" class=" product  span-4"  >
+				<img src="assets/css/gallery/img/empty.png" width="120" height="120"/>
+			</span>
+			<div id="show-2" class="detail span-16">ttt</div>		
+			<span id="9" class=" product  span-4"  >
+				<img src="assets/css/gallery/img/empty.png" width="120" height="120"/>
+			</span>
+			<span id="10" class=" product  span-4"  >
+				<img src="assets/css/gallery/img/empty.png" width="120" height="120"/>
+			</span>
+			<span id="11" class=" product  span-4"  >
+				<img src="assets/css/gallery/img/empty.png" width="120" height="120"/>
+			</span>
+			<span id="12" class=" product  span-4"  >
+				<img src="assets/css/gallery/img/empty.png" width="120" height="120"/>
+			</span>
+			<div id="show-3" class="detail span-16">ttt</div>		
+			<span id="13" class=" product  span-4"  >
+				<img src="assets/css/gallery/img/empty.png" width="120" height="120"/>
+			</span>
+			<span id="14" class=" product  span-4"  >
+				<img src="assets/css/gallery/img/empty.png" width="120" height="120"/>
+			</span>
+			<span id="15" class=" product  span-4"  >
+				<img src="assets/css/gallery/img/empty.png" width="120" height="120"/>
+			</span>
+			<span id="16" class=" product  span-4"  >
+				<img src="assets/css/gallery/img/empty.png" width="120" height="120"/>
+			</span>
+			<div id="show-4" class="detail span-16">ttt</div>		
+	</div>
+</div>

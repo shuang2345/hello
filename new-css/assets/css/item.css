@@ -1,0 +1,99 @@
+/*
+最上方 排序規則
+*/
+#middle{
+	height: 45px;
+	border: 1px solid #9fa0a0;
+	text-align: right;
+	background-color: #f5f2e9;
+}
+
+/*
+單品 roll
+*/
+#item-roll #pad{
+
+	padding-top: 	20px;
+	padding-left: 	40px;
+	padding-right:	20px;
+}
+#item-roll .product{
+	margin-bottom:  20px;
+	margin-right: 20px;
+}
+#item-roll .mix{
+	margin-top: 40px;
+}
+
+/*
+單品 詳細資訊 view
+*/
+#item-view li{
+	display: inline;
+	list-style: none;
+}
+#item-view  h5{
+	font-size: 	 10pt;
+	line-height: 200%; 
+}
+#item-view .share li{
+	display: inline-block;
+	list-style: none;
+}
+#item-view .blog{
+	width: 26px;
+	height: 25px;
+	background-image: url(http://127.0.0.1/BravoMix-Source2/assets/css/gallery/img/b.png);
+    background-repeat: no-repeat;
+}
+#item-view .twitter{
+	width: 26px;
+	height: 25px;
+	background-image: url(http://127.0.0.1/BravoMix-Source2/assets/css/gallery/img/t.png);
+    background-repeat: no-repeat;
+}
+#item-view .blog b{
+	display: none;
+}
+#item-view .twitter b{
+	display: none;
+}
+#item-view .addtolist{
+	width: 		125px;
+	height: 	30px;
+	background-image: url(http://127.0.0.1/BravoMix-Source2/assets/css/gallery/img/shoppinglist.png);
+    background-repeat: no-repeat;
+	background-position : 100% 10%;
+}
+#item-view .addtolist b{
+	display: none;
+}
+#item-view .addtowardrobe{
+	width: 		125px;
+	height: 	30px;
+	background-image: url(http://127.0.0.1/BravoMix-Source2/assets/css/gallery/img/mycloset.png);
+    background-repeat: no-repeat;
+	background-position : 100% 10%;
+}
+#item-view .addtowardrobe b{
+	display: none;
+}
+#item-view .space{
+		word-spacing: 35px;
+}
+#item-view .list_bar{
+	margin-top: 20px;
+	margin-bottom: 20px;
+
+}
+#item-view .photo{
+	margin-top: 20px;
+}
+#item-view .share{
+	text-align:center;
+}
+#item-view .share_2{
+	text-align: center;
+	margin-top: 5px;
+	margin-bottom: 5px;
+}

@@ -1,0 +1,61 @@
+
+/*
+單品頁
+*/
+.mix{
+	margin-top: 40px;
+}
+.pad{
+	padding-bottom: 40px;
+}
+/*
+達人頁
+*/
+.pro_pad{
+	background-color: #f5f2e9;
+	margin-top: 40px;
+	border: 1px solid #9fa0a0;
+}
+.photo{
+	border-right: 1px solid #000000;
+	width: 210px;
+	margin-top: 20px;
+}
+.btns{
+	height: 40px;
+	margin-top: 20px;
+}
+.profile{
+	margin-top: 20px;
+}
+
+.info{
+	margin-top: 50px;
+	padding-top: 20px;
+}
+/*
+商品詳細
+*/
+.detail{
+	font-size: 10pt;
+	line-height: 200%; 
+}
+.space{
+		word-spacing: 35px;
+}
+.list_bar{
+	margin-top: 20px;
+	margin-bottom: 20px;
+
+}
+.photo_pdt{
+	margin-top: 20px;
+}
+.share{
+	text-align: center;
+}
+.share_2{
+	text-align: center;
+	margin-top: 5px;
+	margin-bottom: 5px;
+}

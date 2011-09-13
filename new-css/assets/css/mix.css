@@ -1,0 +1,77 @@
+/* 
+最上方 排序規則
+*/
+#middle{
+	height: 45px;
+	border: 1px solid #9fa0a0;
+	text-align: right;
+	background-color: #f5f2e9;
+}
+
+/*
+混搭 詳細資訊 view
+*/
+#mix-view .mixpad{
+	padding-top: 40px;
+	border: 1px solid #9fa0a0;
+}
+#mix-view .title{
+	font-size: 125%;
+	margin-bottom: 5px;
+}
+#mix-view .photo{
+	margin-left: 30px;
+	margin-right: 30px;
+}
+#mix-view .description{
+	height: 80px;
+	margin-top: 15px;
+}
+#mix-view .description{
+	height: 80px;
+	margin-top: 15px;
+}
+#mix-view  .des_1{
+
+	text-align: left;
+}
+#mix-view .des_2{
+
+	text-align: right;	
+}
+#mix-view .share{
+	height: 30px;
+
+}
+#mix-view  .share li{
+	display: inline-block;
+	list-style: none;
+}
+#mix-view .bravo{
+	width: 85px;
+	height: 25px;
+	background-image: url(http://127.0.0.1/BravoMix-Source2/assets/css/gallery/img/bravo.png);
+    background-repeat: no-repeat;
+}
+#mix-view .bravo b{
+	display: none;
+}
+#mix-view .fb{
+	width: 26px;
+	height: 25px;
+	background-image: url(http://127.0.0.1/BravoMix-Source2/assets/css/gallery/img/f.png);
+    background-repeat: no-repeat;
+}
+#mix-view .fb b{
+	display: none;
+}
+#mix-view .twitter{
+
+	width: 26px;
+	height: 25px;
+	background-image: url(http://127.0.0.1/BravoMix-Source2/assets/css/gallery/img/t.png);
+    background-repeat: no-repeat;
+}
+#mix-view .twitter b{
+	display: none;
+}

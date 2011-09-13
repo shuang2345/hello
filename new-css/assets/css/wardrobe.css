@@ -1,0 +1,183 @@
+
+/*
+線上衣櫃
+*/
+#wardrobe-roll{
+	padding-top: 20px;
+	padding-right: 15px;
+	border-radius: 6px; /* Opera 10.5+ */
+	-moz-border-radius: 6px; /* Firefox */
+	-webkit-border-radius: 6px; /* Safari 和 Chrome */
+	border: 1px solid #9fa0a0;
+	background-color: #f5f2e9;
+	color: #88502c;
+}
+
+/*
+搜尋區塊
+*/
+#wardrobe-roll #search2{
+	text-align: left;
+}
+#search2 input
+{
+    border: 1px solid #CCC;
+}
+/*
+衣櫃空間顯示區塊
+*/
+#wardrobe-roll #war-space{
+	
+	text-align: center;
+	font-size: 10pt;
+}
+/*
+新增按鈕
+*/
+#wardrobe-roll #add-new{
+	text-align: right;
+	word-spacing: 15px;
+}
+#wardrobe-roll #add-new li{
+	list-style: none;
+	display: inline-block;
+}
+#wardrobe-roll #add-new .addnew{
+	 border-radius: 6px; /* Opera 10.5+ */
+	-moz-border-radius: 6px; /* Firefox */
+	-webkit-border-radius: 6px; /* Safari 和 Chrome */
+	 border: 1px solid #000;
+	 margin: 2px 5px;
+	 color: #fff;
+	 background-color: #9fa0a0;
+	 padding: 3px;
+}
+#wardrobe-roll #add-new .sub{
+	border-radius: 6px; /* Opera 10.5+ */
+	-moz-border-radius: 6px; /* Firefox */
+	-webkit-border-radius: 6px; /* Safari 和 Chrome */
+	 border: 1px solid #000;
+	 margin: 2px 5px;
+	 color: #fff;
+	 background-color: #9fa0a0;
+	 padding: 3px;
+}
+#wardrobe-roll #add-new .sx{
+	border-radius: 6px; /* Opera 10.5+ */
+	-moz-border-radius: 6px; /* Firefox */
+	-webkit-border-radius: 6px; /* Safari 和 Chrome */
+	 border: 1px solid #000;
+	 margin: 2px 5px;
+	 color: #fff;
+	 background-color: #9fa0a0;
+	 padding: 3px;
+}
+
+/*
+左邊衣櫃大區塊
+*/
+#wardrobe-roll #wardrobe {
+	padding-bottom: 20px;
+
+
+}
+/*
+衣櫃中按鈕列
+*/
+#wardrobe-roll #button{
+	border-bottom: 1px solid black;
+	height: 20px;
+	padding-top: 10px;
+	padding-bottom: 0px;
+}
+/*
+上方menu
+*/
+#wardrobe-roll .menu{
+	list-style: none;
+}
+#wardrobe-roll .menu li{
+	 padding: 5px 15px;
+	 display: inline;
+	 border-radius: 6px; /* Opera 10.5+ */
+	-moz-border-radius: 6px; /* Firefox */
+	-webkit-border-radius: 6px; /* Safari 和 Chrome */
+	 border: 1px solid #000;
+	 margin: 2px 5px;
+	 color: #9fa0a0;
+	 background-color: #fff;
+}
+#wardrobe-roll .menu li:hover{
+	background-color: #9fa0a0;
+	color:	#fff;
+}
+#wardrobe-roll .menu li:active{
+	background-color: #9fa0a0;
+	color:	#fff;
+}
+/*
+頁碼區
+*/
+#wardrobe-roll #pages {
+	text-align: right;
+	padding-top: 10px;
+	font-weight: bold;
+	font-size: 12pt;
+}
+#wardrobe-roll #pages li{
+	list-style: none;
+	display: inline-block;
+}
+
+#wardrobe-roll #pages .last{
+	width: 17px;
+	height: 17px;
+	background-image: url(http://127.0.0.1/BravoMix-Source2/assets/css/gallery/img/sleft.png);
+    background-repeat: no-repeat;
+}
+#wardrobe-roll #pages .last b{
+	display: none;
+}
+#wardrobe-roll #pages .next{
+	width: 17px;
+	height: 17px;
+	background-image: url(http://127.0.0.1/BravoMix-Source2/assets/css/gallery/img/sright.png);
+    background-repeat: no-repeat;
+}
+#wardrobe-roll #pages .next b{
+	display: none;
+}
+
+/*
+衣櫃列
+*/
+#wardrobe-roll #wardrobe .mix{
+	padding-left: 20px;
+	margin-bottom: 20px;
+
+}
+#wardrobe-roll #pad{
+
+	padding-top: 	20px;
+	padding-left: 	40px;
+	padding-right:	20px;
+}
+#wardrobe-roll .product{
+	margin-bottom:  20px;
+	margin-right: 20px;
+}
+/*
+左邊暫存衣櫃
+*/
+#wardrobe-roll #temp{
+	border-radius: 6px; /* Opera 10.5+ */
+	-moz-border-radius: 6px; /* Firefox */
+	-webkit-border-radius: 6px; /* Safari 和 Chrome */
+	border: 1px solid #9fa0a0;
+	background-color: #ffffff;
+	height: 700px;
+}
+
+/*
+END wardrobe-roll
+*/

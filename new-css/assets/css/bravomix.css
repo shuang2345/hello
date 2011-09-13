@@ -1,0 +1,122 @@
+/**
+ * top
+ **/
+#top
+{
+    background-color: #000;
+    color: #FFF;
+}
+
+/**
+ * header 
+ **/
+#header .menu 
+{
+    text-align: right;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    height: 30px;
+    line-height: 30px;
+    border-bottom: 1px solid #CCC;
+}
+#header .menu li
+{
+    display: inline;
+    margin: 1em;
+}
+#header .menu li a
+{
+    color: #41210C;
+    font-weight: bold;
+}
+#header .logo 
+{
+    height: 41px;
+    width: 191px;
+    background-image: url(http://127.0.0.1/BravoMix-Source2/assets/css/gallery/img/logo.png);
+    background-repeat: no-repeat;
+}
+#header .logo strong
+{
+    display: none;
+}
+/**
+ * nav 
+ **/
+#nav .menu 
+{
+    text-align: right;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    height: 32px;
+    line-height: 32px;
+}
+#nav .menu li
+{
+    display: inline;
+    background-color: #A38A76;
+    border:1px solid #CCC;
+    padding: 8px 15px;
+    margin: 2px 5px;
+}
+#nav .menu li:hover
+{
+    background-color: #663333;
+}
+#nav .menu li a
+{
+    color: #FFF;
+    font-size: small;
+    text-decoration: none;   
+}
+/**
+ * center
+ **/
+#center
+{
+    border: 1px solid #CCC;
+    background-image: url(http://127.0.0.1/BravoMix-Source2/assets/css/gallery/img/center-bg.png);
+    background-repeat: repeat-y;
+}
+
+/**
+ * footer
+ **/
+#footer .menu 
+{
+    text-align: right;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    height: 30px;
+    line-height: 30px;
+    border-bottom: 1px solid #CCC;
+}
+#footer .menu li
+{
+    display: inline;
+    margin: 1em;
+}
+#footer .menu li a
+{
+    color: #735C4A;
+}
+/*############################################################################*/
+.aside-box {
+    border-bottom: 1px solid #CCC;
+}
+.aside-box h5
+{
+    text-align: center;
+    color: #41210C;
+}
+#search 
+{
+    background-color: #999;
+}
+#search input
+{
+    border: 1px solid #CCC;
+}

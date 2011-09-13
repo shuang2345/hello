@@ -1,0 +1,82 @@
+
+#top{
+	background-color: white;
+	color: #88502c;
+	height: 40px;
+	text-align: right;
+	
+}
+
+#nav {
+	text-align: right;
+}
+
+/*
+左邊欄位
+*/
+
+#search{
+	background-color: #b5b5b6;
+	height:  40px;
+}
+
+#famous{
+	padding-right: 20px;
+	padding-left:  20px;
+}
+.side {
+	padding-top: 10px;
+	height:  40px;
+	border-right:1px solid #9fa0a0;
+	border-left:1px solid #9fa0a0;
+	border-bottom:1px solid #9fa0a0;
+}
+.side_l {
+	height: 300px;
+	padding-top: 10px;
+	border-right:1px solid #9fa0a0;
+	border-left:1px solid #9fa0a0;
+	border-bottom:1px solid #9fa0a0;
+	text-align: center;
+	background-color: #f5f2e9;
+}
+
+/*
+中間
+*/
+#button{
+	margin-top: 20px;
+	height: 50px;
+}
+#middle{
+	height: 45px;
+	border: 1px solid #9fa0a0;
+	text-align: right;
+	background-color: #f5f2e9;
+}
+.mixpad{
+	border-right:1px solid #9fa0a0;
+	border-left:1px solid #9fa0a0;
+	border-bottom:1px solid #9fa0a0;
+}
+/*
+FOR ALL
+*/
+hr{
+	background-color: #9fa0a0;
+}
+a{
+	color: #88502c;
+}
+
+li{
+	list-style-type:none;
+    list-style: none;
+    list-style-image: none;
+	display: inline;
+	padding-left: 10px;
+	padding-right: 10px;
+}
+td{
+	padding:	0px;
+}
